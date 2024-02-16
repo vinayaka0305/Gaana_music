@@ -1,0 +1,18 @@
+.product-carousel{
+    position: relative;
+    overflow: hidden;
+    padding: 26px;
+}
+.pre-btn,.next-btn{
+    border: none;
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.next-btn{
+    right: 0;
+}

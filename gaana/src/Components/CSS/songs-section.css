@@ -1,0 +1,71 @@
+.music-container{
+    display: flex;
+}
+
+.left-section{
+    width: 75%;
+    height: 500px;
+}
+.song-sections{
+    margin: -2px 10PX;
+    flex: 1;
+    width: 100%;
+}
+.section-heading{
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: hsla(0, 8%, 14%, 0.9);
+    text-transform: capitalize;
+    padding: 0px 30px 0px 7px;
+}
+.songs-container{
+    position: sticky;
+    display: flex;
+    overflow: hidden;
+}
+.song-card{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.song-card:hover .overlay{
+    visibility: visible;
+}   
+
+.song-card:hover .img-cont{
+    filter: brightness(0.75);
+}  
+
+.img-cont{
+    width: 130px;
+    height: 130px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+.img-cont img{
+    width: 130px;
+    height: 130px;
+}
+.song-name{
+    margin-top: 6px;
+    font-size: 16px;
+}
+.overlay{
+    position: absolute;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    background-image: url(https://a10.gaanacdn.com/gn_img/images/play_1621599900.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: calc(50% + 1px) 50%;
+}
