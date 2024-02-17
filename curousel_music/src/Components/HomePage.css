@@ -1,3 +1,13 @@
+.main-container{
+    width: 100%;
+}
+.music-container{
+    display: flex;
+}
+.left-section{
+    width: 75%;
+    height: 500px;
+}
 .product-curosel{
     position: relative;
     overflow: hidden;

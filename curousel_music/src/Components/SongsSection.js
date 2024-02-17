@@ -1,6 +1,6 @@
 import React from "react";
 import "./Mycard.css";
-const Mycard = ({ list }) => {
+const SongsSection = ({ list }) => {
   return (
     <>
       <div className="song-container">
@@ -20,4 +20,4 @@ const Mycard = ({ list }) => {
   );
 };
 
-export default Mycard;
+export default SongsSection;
