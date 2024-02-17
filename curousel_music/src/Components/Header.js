@@ -1,22 +1,56 @@
-import React from "react";
+import React, { useState,useRef,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./CSS/Header.css";
 
 export function Header({search}) {
+
+  const [burgerclass,setBurgerClass] = useState("burger-bar unclicked");
+  const[menuClass, setMenuClass]  = useState("menu hidden");
+  const[isMenuClicked,setIsMenuClicked] = useState(false);
+  const menuRef = useRef(null);
+  const updateMenu = ()=>{
+    if(!isMenuClicked){
+      setBurgerClass("burger-bar clicked");
+      setMenuClass("menu visible");
+    }else{
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("menu hidden")
+    }
+    setIsMenuClicked(!isMenuClicked);
+  }
+
+  useEffect(()=>{
+    const handleClickOutside = (event)=>{
+      if(menuRef.current && !menuRef.current.contains(event.target)){
+        setBurgerClass("burger-bar unclicked");
+        setMenuClass("menu hidden");
+        setIsMenuClicked(false);
+      }
+    }
+    document.addEventListener("mousedown",handleClickOutside);
+    return()=>{
+      document.removeEventListener("mousedown",handleClickOutside)
+    }
+  },[])
+
   return (
     <div className="header-container">
-      <div>
-        <span className="hamburger-menu">
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <path
+      <div className="burger-container">
+          <div className="burger-menu" onClick={updateMenu}>
+            <div className={burgerclass}>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path
               class="svg_color"
               fill="#000"
               fill-rule="nonzero"
               d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
             ></path>
-          </svg>
-        </span>
-        <Link className="logo" to="/">
+            </svg>
+              </div>
+          </div>
+          <div ref={menuRef} className={menuClass}></div>
+          <div>
+             <Link className="logo" to="/">
           <svg width="87" height="22" viewBox="0 0 87 22">
             <g fill="none" fill-rule="evenodd">
               <path
@@ -31,7 +65,8 @@ export function Header({search}) {
               ></path>
             </g>
           </svg>
-        </Link>
+              </Link>
+          </div>
       </div>
       <div className="search-input">
         <span className="h_search">
