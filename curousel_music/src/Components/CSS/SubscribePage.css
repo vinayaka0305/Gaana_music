@@ -203,6 +203,9 @@
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, .1);
 }
+.payPlanArticle label:hover{
+    background-color: rgba(64, 86, 183, 0.248);
+}
 .payPlanArticle label .payPlanDetail {
     color: #000;
     display: flex;
@@ -250,7 +253,7 @@
 }
 /* Specific styling for selectedPlan-99 */
 #selectedPlan.payPlanArticle label {
-    background-color: red; /* Change background color when selectedPlan is 99 */
+    background-color: rgba(236, 147, 147, 0.873); /* Change background color when selectedPlan is 99 */
 }
 .s-userName{
     color: #282b2f;

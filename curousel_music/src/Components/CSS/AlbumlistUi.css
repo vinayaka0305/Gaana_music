@@ -7,9 +7,10 @@
 .Al-title{
     margin-top: 60px;
     margin-left: 20px;
+    font-size: 30px;
 }
 #dark .Al-title{
-    color: #ffffffe6;
+    color: #ffffff8f;
 }
 .Al-Album-cnt{
     width: 75%;

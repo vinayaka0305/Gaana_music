@@ -55,12 +55,12 @@ const MenuItems = ({ closeMenu, theme, toggleTheme }) => {
             </Link>
           </li>
           <li className="sideLi">
-            <Link to="/" className="sideLink" onClick={handleLinkClick}>
+            <Link to="/radio" className="sideLink" onClick={handleLinkClick}>
               Radio
             </Link>
           </li>
           <li className="sideLi">
-            <Link to="/" className="sideLink" onClick={handleLinkClick}>
+            <Link to="/podcast" className="sideLink" onClick={handleLinkClick}>
               Podcast
             </Link>
           </li>

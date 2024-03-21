@@ -1,14 +1,15 @@
 // App.js
-import React, { createContext, useState } from "react";
+import React, { createContext, lazy, useState } from "react";
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
 } from "react-router-dom";
-import { Header } from "./Components/Header&Footer/Header";
+import Header from "./Components/Header";
 import Nav from "./Components/Nav/Nav";
-import HomePage from "./Components/HomePage/HomePage";
+const HomePage = lazy(()=>import("./Components/HomePage/HomePage"));
 import LoginPage from "./Components/Login_signup/LoginPage";
 import TrendingSongs from "./Components/TrendingSongsList/TrendingSongs";
 import { MusicProvider } from "./MusicContext";
@@ -21,6 +22,8 @@ import AlbumListUI from "./Components/AlbumList/AlbumListUI";
 import AlbumDetails from "./Components/AlbumList/AlbumDetails";
 import T20Songs from "./Components/Top20Songs/Top20Songs";
 import SubscribePage from "./Components/SubscribePage/SubscribePage";
+import Radio from "./Components/Radio&Poadcast/Radio";
+import Podcast from "./Components/Radio&Poadcast/Podcast";
 
 
 
@@ -61,6 +64,8 @@ function App() {
               <Route path="/song/:id" element={<TrendingSongsDetails />} />
               <Route path="/player" element={<Player />} />
               <Route path="/album/:id" element={<AlbumDetails/>}/>
+              <Route path="/radio" element={<Radio/>}/>
+              <Route path="/podcast" element={<Podcast/>}/>
               <Route
                 path="/mymusic"
                 element={

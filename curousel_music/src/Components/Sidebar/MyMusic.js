@@ -98,7 +98,7 @@ const MyMusic = () => {
   const currentSong = list[currentSongIndex];
 
   if (!currentSong) {
-    return <div>No songs found</div>;
+    return <div className="mm-nosongs">No songs in MyMusic</div>;
   }
 
   return (
@@ -113,9 +113,9 @@ const MyMusic = () => {
               <div>
                 <h2 className="Tsongs-h2">My music</h2>
                 <h3 className="Tsongs-h3">{currentSong.title}</h3>
-                <p className="Tsongs-h3">
+                {/* <p className="Tsongs-h3">
                   {currentSong.artist.map((item) => item.name).join(" & ")}
-                </p>
+                </p> */}
               </div>
               <div>
                 <button className="tPlay-btn" onClick={togglePlayPause}>
@@ -125,7 +125,7 @@ const MyMusic = () => {
             </div>
           </div>
           <div className="tsongs-bottom">
-            {list && list.length > 0 ? (
+            {list && list.length > 0 &&
               <div className="table-container">
                 <div className="thead">
                   <div className="track-heading-container">
@@ -162,13 +162,9 @@ const MyMusic = () => {
                     </div>
                   ))}
                 </div>
-              </div>
-            ) : (
-              <div className="mm-nosongd found">No songs found</div>
-            )}
+              </div>} 
           </div>
         </div>
-
         <Footer />
       </div>
       <TsongPlayer
