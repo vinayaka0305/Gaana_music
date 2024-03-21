@@ -1,9 +1,9 @@
 import React, { useEffect, useState,useRef } from "react";
-import "./CSS/Player.css";
+// import "../CSS/Player.css";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import MusicPlayer from "./MusicPlayer";
-import "./CSS/Songcard.css";
+
 
 const Player = () => {
   const location = useLocation();

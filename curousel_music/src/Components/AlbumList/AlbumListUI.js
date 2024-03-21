@@ -1,8 +1,8 @@
 import React from "react";
-import "./CSS/AlbumlistUi.css";
-import { useMusicContext } from "../MusicContext";
+import "../CSS/AlbumlistUi.css";
+import { useMusicContext } from "../../MusicContext";
 import { useNavigate } from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "../Header&Footer/Footer";
 
 const AlbumListUI = () => {
   const { list } = useMusicContext();

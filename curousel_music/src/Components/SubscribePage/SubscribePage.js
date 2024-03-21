@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./CSS/SubscribePage.css";
+import "../CSS/SubscribePage.css";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "../UseProvider";
+import { useUser } from "../../UseProvider";
 
 const SubscribePage = () => {
   const { getToken, getName } = useUser();

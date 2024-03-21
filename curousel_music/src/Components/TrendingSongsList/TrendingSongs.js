@@ -1,14 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useMusicContext } from "../MusicContext";
+import { useMusicContext } from "../../MusicContext";
 import TsongPlayer from "./TsongPlayer";
-import "./CSS/TsongPlayer.css";
-import Footer from "./Footer";
+import "../CSS/TsongPlayer.css";
+import Footer from "../Header&Footer/Footer";
 
-const T20Songs = () => {
-  const { t20list } = useMusicContext();
+const TrendingSongs = () => {
+  const { tList } = useMusicContext();
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  console.log(t20list);
+  console.log(tList);
+
   const audioRef = useRef(new Audio());
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const T20Songs = () => {
     if (isPlaying) {
       audioRef.current.play();
     }
-  }, [currentSongIndex, isPlaying, t20list]);
+  }, [currentSongIndex, isPlaying, tList]);
 
   const togglePlayPause = () => {
     if (isPlaying) {
@@ -31,25 +32,25 @@ const T20Songs = () => {
   };
 
   const playNextSong = () => {
-    const nextIndex = (currentSongIndex + 1) % t20list.length;
+    const nextIndex = (currentSongIndex + 1) % tList.length;
     setCurrentSongIndex(nextIndex);
   };
 
   const playPreviousSong = () => {
-    const previousIndex = (currentSongIndex - 1 + t20list.length) % t20list.length;
+    const previousIndex = (currentSongIndex - 1 + tList.length) % tList.length;
     setCurrentSongIndex(previousIndex);
   };
 
-  const currentSong = t20list[currentSongIndex];
+  const currentSong = tList[currentSongIndex];
 
   if (!currentSong) {
     return <div>Song Not found</div>;
   }
 
-  const handlePlay=(index)=>{
-    setCurrentSongIndex(index)
-    setIsPlaying(true);
-  }
+  const hanldePlay = (index) => {
+    setCurrentSongIndex(index);
+    setIsPlaying(true)
+  };
 
   return (
     <>
@@ -61,7 +62,7 @@ const T20Songs = () => {
             </div>
             <div className="tsong-names">
               <div>
-                <h2 className="Tsongs-h2">Top 20 of this week</h2>
+                <h2 className="Tsongs-h2">Trending Songs</h2>
                 <h3 className="Tsongs-h3">{currentSong.title}</h3>
                 <p className="Tsongs-h3">
                   {currentSong.artist.map((item) => item.name).join(" & ")}
@@ -75,7 +76,7 @@ const T20Songs = () => {
             </div>
           </div>
           <div className="tsongs-bottom">
-            {t20list && t20list.length > 0 && (
+            {tList && tList.length > 0 && (
               <div className="table-container">
                 <div className="thead">
                   <div className="track-heading-container">
@@ -86,13 +87,18 @@ const T20Songs = () => {
                   </div>{" "}
                 </div>
                 <div className="tbody">
-                  {t20list.map((obj, index) => (
+                  {tList.map((obj, index) => (
                     <div className="tr" key={index}>
-                      <div>
-                        <img src={obj.thumbnail} style={{height:30,width:30}}/>
+                      <div className="track-img" >
+                       <img src={obj.thumbnail} style={{height:30,width:30}}/>
                       </div>
                       <div className="track-container">
-                        <div className="td Tsongs-h2" onClick={()=>handlePlay(index)}>{obj.title}</div>
+                        <div
+                          className="td Tsongs-h2"
+                          onClick={() => hanldePlay(index)}
+                        >
+                          {obj.title}
+                        </div>
                       </div>
                       <div className="artist-container">
                         <div className="td Tsongs-h3">
@@ -122,4 +128,4 @@ const T20Songs = () => {
   );
 };
 
-export default T20Songs;
+export default TrendingSongs;

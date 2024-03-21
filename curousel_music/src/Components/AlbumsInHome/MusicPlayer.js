@@ -1,7 +1,7 @@
 // MusicPlayer.js
 import React, { useState, useEffect, useRef } from "react";
-import "./CSS/MusicPlayer.css";
-import { useUser } from "../UseProvider";
+// import "./CSS/MusicPlayer.css";
+import { useUser } from "../../UseProvider";
 import axios from "axios";
 const MusicPlayer = (props) => {
 

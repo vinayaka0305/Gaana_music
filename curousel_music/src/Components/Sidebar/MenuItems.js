@@ -1,7 +1,7 @@
 import React from "react";
-import "./CSS/sideBar.css";
+import "../CSS/sideBar.css";
 import { Link } from "react-router-dom";
-import { useUser } from "../UseProvider";
+import { useUser } from "../../UseProvider";
 
 const MenuItems = ({ closeMenu, theme, toggleTheme }) => {
   const handleLinkClick = () => {

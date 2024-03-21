@@ -1,9 +1,9 @@
 import React from "react";
-import "./Mycard.css";
-import { useMusicContext } from "../MusicContext";
+import "../CSS/Mycard.css";
+import { useMusicContext } from "../../MusicContext";
 import { Link } from "react-router-dom";
 
-const TrendingSongsHome = (props) => {
+const TrendingSongsHome = () => {
   const { tList } = useMusicContext();
   // console.log(tList);
   // const artistList = artist.map((item)=>item.name).join(" & ");

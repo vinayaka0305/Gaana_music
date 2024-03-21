@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import { useUser } from "../UseProvider";
-import TsongPlayer from "./TsongPlayer";
-import "./CSS/MyMusic.css";
-import "./CSS/TsongPlayer.css";
-import Footer from "./Footer";
+import { useUser } from "../../UseProvider";
+import TsongPlayer from "../TrendingSongsList/TsongPlayer";
+import "../CSS/MyMusic.css";
+import "../CSS/TsongPlayer.css";
+import Footer from "../Header&Footer/Footer";
 
 const MyMusic = () => {
   const { getToken } = useUser();

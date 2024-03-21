@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./CSS/Login.css";
-import SignUp from "./SignUp";
+import "../CSS/Login.css";
+import Login from "./Login";
 import { useNavigate } from "react-router-dom";
 
-const SignUpPage = () => {
+const LoginPage = () => {
   const [isOpen, setIsOpen] = useState(true);
   const navigate = useNavigate();
   const handleClose = () => {
@@ -37,7 +37,7 @@ const SignUpPage = () => {
                   </svg>
                 </div>
                 <div>
-                    <SignUp />
+                    <Login />
                 </div>
               </div>
               <div className="login-img">
@@ -51,4 +51,4 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+export default LoginPage;

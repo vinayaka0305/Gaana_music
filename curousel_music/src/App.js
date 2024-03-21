@@ -6,21 +6,21 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { Header } from "./Components/Header";
-import Nav from "./Components/Nav";
-import HomePage from "./Components/HomePage";
-import LoginPage from "./Components/LoginPage";
-import TrendingSongs from "./Components/TrendingSongs";
+import { Header } from "./Components/Header&Footer/Header";
+import Nav from "./Components/Nav/Nav";
+import HomePage from "./Components/HomePage/HomePage";
+import LoginPage from "./Components/Login_signup/LoginPage";
+import TrendingSongs from "./Components/TrendingSongsList/TrendingSongs";
 import { MusicProvider } from "./MusicContext";
-import TrendingSongsDetails from "./Components/TrendingSongsDetails";
-import Player from "./Components/Player";
-import SignUpPage from "./Components/SignUpPage";
-import MyMusic from "./Components/MyMusic";
+import TrendingSongsDetails from "./Components/TrendingSongsInHome/TrendingSongsDetails";
+import Player from "./Components/AlbumsInHome/Player";
+import SignUpPage from "./Components/Login_signup/SignUpPage";
+import MyMusic from "./Components/Sidebar/MyMusic";
 import { useUser } from "./UseProvider";
-import AlbumListUI from "./Components/AlbumListUI";
-import AlbumDetails from "./Components/AlbumDetails";
-import T20Songs from "./Components/Top20Songs";
-import SubscribePage from "./Components/SubscribePage";
+import AlbumListUI from "./Components/AlbumList/AlbumListUI";
+import AlbumDetails from "./Components/AlbumList/AlbumDetails";
+import T20Songs from "./Components/Top20Songs/Top20Songs";
+import SubscribePage from "./Components/SubscribePage/SubscribePage";
 
 
 

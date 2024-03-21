@@ -1,6 +1,6 @@
 import React from "react";
-import "./CSS/TSongHomePlay.css";
-import Footer from "./Footer";
+import "../CSS/TSongHomePlay.css";
+import Footer from "../Header&Footer/Footer";
 
 //TrendingSongsDetails
 const SongsMusicPlayer = (props) => {

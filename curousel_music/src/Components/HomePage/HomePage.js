@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import "./HomePage.css";
-import "./CSS/SongsCurosel.css";
-import "./CSS/AlbumCurosel.css";
-import AlbumSection from "./AlbumSection";
-import TrendingSongsHome from "./TrendingSongsHome";
-import Footer from "./Footer";
+import "../CSS/HomePage.css";
+import "../CSS/SongsCurosel.css";
+import "../CSS/AlbumCurosel.css";
+import AlbumSection from "../AlbumsInHome/AlbumSection";
+import TrendingSongsHome from "../TrendingSongsInHome/TrendingSongsHome";
+import Footer from "../Header&Footer/Footer";
 
 
 const HomePage = () => {

@@ -1,8 +1,8 @@
 // Homepage album
 import React from "react";
-import { useMusicContext } from "../MusicContext";
+import { useMusicContext } from "../../MusicContext";
 import { useNavigate } from "react-router-dom"; // Import Link
-import "./CSS/AlbumCard.css";
+import "../CSS/AlbumCard.css";
 
 const AlbumSection = () => {
   const { list } = useMusicContext();

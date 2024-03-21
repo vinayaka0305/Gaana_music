@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./CSS/LoginSignUp.css";
+import "../CSS/LoginSignUp.css";
 import axios from "axios";
-import email_icon from "./Assets/email.png";
-import password_icon from "./Assets/password.png";
-import { useUser } from "../UseProvider";
+import email_icon from "../Assets/email.png";
+import password_icon from "../Assets/password.png";
+import { useUser } from "../../UseProvider";
 
 const Login = () => {
   const {onTokenHandler,onNameHandler} = useUser();

@@ -1,5 +1,5 @@
 import React from "react";
-import "./CSS/MusicPlayer.css";
+import "../CSS/MusicPlayer.css";
 
 const TsongPlayer = (props) => {
     const {

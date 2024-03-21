@@ -141,3 +141,7 @@
 .a-artist-heading-container {
   margin-left: 10px; /* Add some spacing between headings */
 }
+
+#dark .no-songs{
+  color: #fff;
+}

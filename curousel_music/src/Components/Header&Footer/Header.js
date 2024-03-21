@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./CSS/Header.css";
-import { useMusicContext } from "../MusicContext";
-import { useUser } from "../UseProvider";
-import MenuItems from "./MenuItems";
+import "../CSS/Header.css";
+import { useMusicContext } from "../../MusicContext";
+import { useUser } from "../../UseProvider";
+import MenuItems from "../Sidebar/MenuItems";
 
 export function Header({ theme, toggleTheme }) {
   const { onSearhDetails, onSearhDetailsAlbum } = useMusicContext();

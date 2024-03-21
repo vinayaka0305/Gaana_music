@@ -6,3 +6,7 @@
     cursor: pointer;
     padding: 5px;
 }
+
+#dark .fa-regular{
+    color: #ffffff;
+}

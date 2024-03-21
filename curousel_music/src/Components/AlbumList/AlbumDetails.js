@@ -2,8 +2,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import MusicPlayer from "./MusicPlayer";
-import "./CSS/Player.css";
+import MusicPlayer from "../AlbumsInHome/MusicPlayer";
+import "../CSS/Player.css";
 
 const AlbumDetails = () => {
   const { id } = useParams();

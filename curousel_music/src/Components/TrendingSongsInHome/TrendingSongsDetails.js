@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useMusicContext } from "../MusicContext";
+import { useMusicContext } from "../../MusicContext";
 import { useParams } from "react-router-dom";
 import SongsMusicPlayer from "./SongsMusicPlayer";
 
