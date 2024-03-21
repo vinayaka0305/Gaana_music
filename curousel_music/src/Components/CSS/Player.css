@@ -1,0 +1,143 @@
+.a-tsongs-main-container{
+  width: 100%;
+  margin-top: -10px;
+  min-height: 600px;
+}
+
+#dark .a-tsongs-main-container{
+  background-color: #1b1b1b;
+}
+
+.a-tsongs-container{
+  width: 75%;
+  display: flex;
+  margin-left: 16px;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+#dark .a-tsongs-container{
+  background-color: #1b1b1b;
+}
+
+.a-tsongs-top{
+  display: flex;
+  width: 100%;
+}
+.a-tsong-img{
+  width: 250px;
+  height: 250px;
+  border-radius: 4px;
+}
+.a-tsong-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.a-tsong-names{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  justify-content: center;
+  text-align: left;
+}
+.a-tPlay-btn{
+  width: 106px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: #e72c30;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 0 40px;
+  cursor: pointer;
+}
+.a-tsongs-bottom{
+  margin-top: 5px;
+}
+
+#dark .a-Tsongs-h2{
+    color: #ffffffe6;
+}
+
+#dark .a-Tsongs-h3{
+    color: #8e8e93;
+}
+#dark .a-th-heading-tracks{
+    background-color: #1b1b1b;
+    color: #ffffffe6
+}
+
+#light .a-th-heading-tracks{
+    background-color: #ffffff;
+    color: #000000e6
+}
+
+#dark .a-th-heading-tracks{
+    color: #ffffffbf;
+}
+
+
+.a-table-container .a-thead{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#dark .a-thead{
+    border-bottom: 1px solid #8e8e93;
+}
+
+#light .a-thead{
+     border-bottom: 1px solid #8e8e93;
+}
+.a-tr{
+    cursor: pointer;
+}
+.a-tbody .a-tr{
+    display: flex;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+ }
+
+
+#dark .a-tr{
+    border-bottom: 1px solid #8e8e93;
+}
+
+#light .a-tr{
+     border-bottom: 1px solid #8e8e93;
+}
+.a-th, .a-td {
+    padding: 8px;
+    align-items: left; /* Align text to the left */
+  }
+
+  .a-track-container,
+  .a-artist-container {
+    flex: 1; /* Equal width */
+  }
+  
+  .a-track-container {
+    margin-right: 10px; /* Add some spacing between columns */
+  }
+  
+  .a-artist-container {
+    margin-left: 10px; /* Add some spacing between columns */
+  }
+
+  .a-track-heading-container,
+.a-artist-heading-container {
+  flex: 1; /* Equal width */
+}
+
+.a-track-heading-container {
+  margin-right: 10px; /* Add some spacing between headings */
+}
+
+.a-artist-heading-container {
+  margin-left: 10px; /* Add some spacing between headings */
+}

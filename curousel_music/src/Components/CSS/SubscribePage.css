@@ -1,0 +1,258 @@
+.s-main-container{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-image:linear-gradient(rgb(251, 216, 217), rgb(254, 249, 249));
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.s-header-container{
+    width: 100%;
+}
+.s-logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px;
+    height: 60px;
+}
+.g-header{
+    display: flex;
+   justify-content: space-between; 
+   align-items: center;
+    margin: 20px 60px;
+    height: 60px;
+}
+
+.payment-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 95px 65px 0;
+}
+.p-h1 h1{
+    width: 600px;
+    font-size: 30px;
+    height: 72px;
+}
+.p-h1 h1 span{
+   color: #e72c30;
+}
+.payBanArticles{
+    display: flex;
+    gap: 20px;
+}
+
+.payBanArt img{
+    height: 96px;
+    width: 96px;
+}
+.payBanArt h3{
+    font-size: 14px;
+}
+/*footer css*/
+.s-outer{
+    width: 100%;
+}
+
+
+#dark .s-outer{
+    background-color: #282b2f;
+}
+
+.s-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 94px 10px;
+    margin-left: 10px;
+    padding: 30px;
+}
+.s-row-1{
+    padding: 20px 20px;
+    text-align: center;
+    border-color: rgba(0, 0, 0, 0.916);
+    border-bottom: 1px solid;
+    width: 100%;
+}
+.s-row-1 strong{
+    font-size: 32px;
+    margin-bottom: 25px;
+    display: block;
+}
+.s-row-1 p{
+  color:#8e8e93;
+  font-size: 12px;
+}
+
+.s-row-2{
+    padding: 20px 20px;
+    display: flex;
+    text-align: center;
+    border-color: rgba(0, 0, 0, 0.916);
+    border-bottom: 1px solid;
+    width: 100%;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+}
+.s-row-2 .s-f-Slink h3{
+    font-size: 10px;
+    color: #8e8e93;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.s-row-2 .s-f-Slink{
+    /* width: 136px;
+    height: 58px; */
+    margin: 0 16px;
+    padding: 0 16px;
+    width: 50%;
+}
+.s-row-2 .s-f-strLink{
+    /* width: 136px;
+    height: 58px; */
+    margin: 0 16px;
+    padding: 0 16px;
+    width: 50%;
+}
+.s-row-2 .s-f-Alink{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.s-row-2 .s-f-Alink img{
+    width: 40px;
+    height: 40px;
+}
+
+.s-row-2 .s-f-strLink h3{
+    font-size: 10px;
+    color: #8e8e93;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.s-row-3 span{
+    font-size: 12px;
+    gap: 2px;
+    color: #0000008a;
+}
+.s-row-3{
+    padding: 10px 20px;
+    border-color: rgba(0, 0, 0, 0.916);
+    border-bottom: 1px solid;
+    width:100%;
+}
+.s-row-3 .s-f-links{
+    display: flex;
+    justify-content: space-between;
+}
+.s-row-3 .s-fLink{
+    text-decoration: none;
+}
+.s-row-4{
+    padding: 0px 20px;
+    border-color: rgba(0, 0, 0, 0.916);
+    border-bottom: 1px solid;
+    width:100%
+}
+#dark .s-fheading{
+    color: #ffffff;
+}
+#dark .s-fpara{
+    color: #8e8e93;
+}
+#dark .s-fTerms{
+    color: #ffffffe6;
+}
+.s-copyr{
+    font-size: 14px;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    color: #0000008a;
+}
+#dark .s-copyr{
+    color: #ffffff8a;
+}
+/*footer css ends*/
+
+.combo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.combo article{
+    display: block;
+}
+.payPlanArticle{
+    width: 680px;
+    height: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.payPlanArticle label {
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+.payPlanArticle label .payPlanDetail {
+    color: #000;
+    display: flex;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+
+}
+.payPlanArticle label .payPlanDetail .payPlanprice {
+    width: 66px;
+    flex: 0 0 auto;
+    margin-left: auto;
+    text-align: right;
+    font-size: 20px;
+    color: #e72c30
+}
+.paySubscribeBtn{
+    padding: 12px 0 24px;
+    text-align: center;
+}
+.paySubscribeBtn button {
+    width: 310px;
+    padding: 18px;
+    font-size: 18px;
+    color: #ffffdd;
+    background: #e72c30;
+    background: linear-gradient(90deg, #e72c30, #dc0a47);
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+.paySubscribeBtn button img{
+    margin-left: 10px;
+}
+
+.payPlanDetail input{
+    margin: 10px 10px 10px 10px;
+    background-color: red;
+    transform: scale(1.5);
+}
+.payPlanprice {
+    font-size: 20px; /* Example font size */
+    margin-left: 10px; /* Example margin */
+    cursor: pointer;
+}
+/* Specific styling for selectedPlan-99 */
+#selectedPlan.payPlanArticle label {
+    background-color: red; /* Change background color when selectedPlan is 99 */
+}
+.s-userName{
+    color: #282b2f;
+    font-weight: 700;
+}

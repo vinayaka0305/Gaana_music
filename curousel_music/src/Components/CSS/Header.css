@@ -3,25 +3,57 @@
     justify-content: space-between;
     width: 100%;
     height: 60px;
-    align-items: center;
-    background-color: #f5f5f5;    
+    margin-bottom: 40px;
+    align-items: center;  
+    position: fixed;
+    padding: 0 10px;
+    z-index: 1001;
+  }
+  .logo {
+    font-size: 30px; /* Adjust logo size as needed */
+  }
+  .search-input {
+    flex: 1;
+    margin: 0 5px; /* Add some space between logo and search bar */
+  }
+  #light .header-container{
+    background-color: #f5f5f5;
+  }
+
+  #dark .header-container{
+    background-color: #222428;
+  }
+ 
+
+  #dark .burgerT{
+    fill: #d3d3d4;
+  }
+
+  #light .burgerT{
+    fill: #000;
   }
   .burger-container{
     display: flex;
+    z-index: 1001;
   }
   .burger-menu {
     margin-left: 20px;
     cursor: pointer;
+   
   }
-
   .menu{
-    width: 50%;
-    height: 100vh;
-    background-color: rgb(154,181,240);
+    width: 305px;
+    height:100vh;
     position: absolute;
     top: 0;
-    z-index: 1;
-}
+    /* z-index: 1000;  */
+  }
+  #dark .menu{
+    background-color: #222428;
+  }
+  #light .menu{
+    background-color: #fff;
+  }
 /*--------------Sliding menu------------------*/
 .hidden{
     display: none;
@@ -41,7 +73,13 @@
       color: #8e8e93;
       cursor: text;
       font-size: 12px;
-      background-color: #fff;
+      
+  }
+#light .search-input{
+  background-color: #fff;
+}
+  #dark .search-input{
+    background-color: #1b1b1b;
   }
   
   .search-input .svg_color{
@@ -59,3 +97,145 @@
       margin-right: 10px;
       padding: 7px 3px 0px 3px;
   }
+  .user{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  #dark .user{
+    color: #c8c8c9;;
+  }
+  .nav-button-cnt{
+    display: flex;
+    margin-right: 28px;
+    padding: 1px;
+  }
+  .subscribe{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 1px 1px 1px 1px;
+    background-image: linear-gradient(to right, rgb(250, 7, 7), rgb(231, 126, 60));
+  }
+
+  .subscribe-t{
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+  }
+  .subscribe-plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    height: 27px;
+    width: 124px;
+  }
+
+  #dark .subscribe-plus{
+    background-color: #ffffffe6;
+  }
+
+  #light .subscribe-p{
+    color: red;
+  }
+  #dark .subscribe-p{
+    color: #000;
+  }
+  #light .subscribe-plus{
+    border-color: red;
+  }
+   .subscribe-p{
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .s-link{
+    text-decoration: none;
+  }
+  /* login user stylee */
+  .userName{
+    font-weight: 400;
+    padding: 2px;
+    font-size: 16px;
+  }
+  .h-toggle{
+    margin: 6px;
+  }
+
+  #dark .userName{
+    color: #ffffffe6;
+  }
+  #light .userName{
+    color: #525255;
+  }
+
+  .fa-solid{
+    padding-left: 5px;
+    margin-top: 8px;
+  }
+  #dark .fa-solid{
+    color: #ffffffe6;
+  }
+  #light .fa-solid{
+    color: #525255
+  }
+  /* login user stylee ends*/
+
+  .fa-sun{
+    color: #ffffffe6;
+  }
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    padding-bottom: 10px;
+    width: 360px;
+    padding: 2px 2px;
+  }
+
+  .burger-container {
+    display: block; /* Show burger menu */
+  }
+ 
+  .h-toggle{  
+    display: none;
+  }
+  .nav-button-cnt {
+    display: none;
+  }
+  .subscribe{
+    display: none;
+  }
+  .subscribe-plus{
+    display: none;
+  }
+
+ 
+  .burger-container{
+    display:flex;
+  }
+  .h-logo{
+    order: 1; /* Move logo to the end */
+  }
+  .search-input {
+    max-width: 180px; /* Set a max-width for search bar */
+    font-size: 14px; /* Reduce font size for search bar */
+  }
+  .search-input input{
+    width: 125px;
+  }
+}
+
+/* @media screen and (max-width: 480px) {
+  .header-container {
+    padding: 5px;
+  }
+} */
+

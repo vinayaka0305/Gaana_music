@@ -1,0 +1,135 @@
+.outer{
+    width: 75%;
+    /* margin-left: 20px; */
+}
+
+
+#dark .outer{
+    background-color: #282b2f;
+}
+
+.inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 94px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.row-1{
+    padding: 13px 4px;
+    text-align: center;
+    border-color: rgba(0, 0, 0, 0.916);
+    border-bottom: 1px solid;
+    width: 100%;
+}
+.row-1 strong{
+    font-size: 32px;
+    margin-bottom: 25px;
+    display: block;
+}
+.row-1 p{
+  color:#8e8e93;
+  font-size: 12px;
+}
+
+.row-2{
+    padding: 13px 4px;
+    display: flex;
+    text-align: center;
+    border-color: rgba(0, 0, 0, 0.916);
+    border-bottom: 1px solid;
+    width: 100%;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+}
+.row-2 .f-Slink h3{
+    font-size: 10px;
+    color: #8e8e93;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.row-2 .f-Slink{
+    /* width: 136px;
+    height: 58px; */
+    margin: 0 16px;
+    padding: 0 16px;
+    width: 50%;
+}
+.row-2 .f-strLink{
+    /* width: 136px;
+    height: 58px; */
+    margin: 0 16px;
+    padding: 0 16px;
+    width: 50%;
+}
+.row-2 .f-Alink{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.row-2 .f-Alink img{
+    width: 40px;
+    height: 40px;
+}
+
+.row-2 .f-strLink h3{
+    font-size: 10px;
+    color: #8e8e93;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.row-3 span{
+    font-size: 12px;
+    gap: 2px;
+    color: #0000008a;
+}
+.row-3{
+    padding: 13px 4px;
+    border-color: rgba(0, 0, 0, 0.916);
+    border-bottom: 1px solid;
+    width:100%;
+}
+.row-3 .f-links{
+    display: flex;
+    justify-content: space-between;
+}
+.row-3 .fLink{
+    text-decoration: none;
+}
+.row-4{
+    padding: 13px 4px;
+    border-color: rgba(0, 0, 0, 0.916);
+    border-bottom: 1px solid;
+    width:100%
+}
+#dark .fheading{
+    color: #ffffff;
+}
+#dark .fpara{
+    color: #8e8e93;
+}
+#dark .fTerms{
+    color: #ffffffe6;
+}
+.copyr{
+    font-size: 14px;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    color: #0000008a;
+}
+#dark .copyr{
+    color: #ffffff8a;
+}
+
+@media screen and (max-width: 768px) {
+  .outer{
+    width: 100%;
+    margin-left: 0;
+  }
+    .inner{
+   margin-right: 10px;
+  }
+ }

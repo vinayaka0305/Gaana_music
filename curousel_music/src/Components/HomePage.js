@@ -1,9 +1,13 @@
 import React, { useRef } from "react";
-import SongsSection from "./SongsSection";
 import "./HomePage.css";
-import TrendingSongs from "./TrendingSongs";
+import "./CSS/SongsCurosel.css";
+import "./CSS/AlbumCurosel.css";
+import AlbumSection from "./AlbumSection";
+import TrendingSongsHome from "./TrendingSongsHome";
+import Footer from "./Footer";
 
-const HomePage = ({ list }) => {
+
+const HomePage = () => {
   const songsBoxRef = useRef(null);
   const trendingSongsBoxRef = useRef(null);
 
@@ -24,22 +28,22 @@ const HomePage = ({ list }) => {
       <div className="main-container">
         <div className="music-container">
           <div className="left-section">
-            <div className="product-curosel">
-              <h2 className="section-heading">Songs</h2>
+            <div className="album-product-curosel">
+              <h2 className="album-section-heading">Albums</h2>
               <button
-                className="pre-btn"
+                className="album-pre-btn"
                 onClick={() => btnPressPrev(songsBoxRef)}
               >
                 <p>&lt;</p>
               </button>
               <button
-                className="next-btn"
+                className="album-next-btn"
                 onClick={() => btnPressNext(songsBoxRef)}
               >
                 <p>&gt;</p>
               </button>
-              <div className="product-container" ref={songsBoxRef}>
-                <SongsSection list={list} />
+              <div className="album-product-container" ref={songsBoxRef}>
+                <AlbumSection />
               </div>
             </div>
             <div className="product-curosel">
@@ -57,11 +61,14 @@ const HomePage = ({ list }) => {
                 <p>&gt;</p>
               </button>
               <div className="product-container" ref={trendingSongsBoxRef}>
-                <TrendingSongs list={list} />
+                <TrendingSongsHome />
               </div>
             </div>
           </div>
+          <div className="right-section"></div>
         </div>
+        <div></div>
+        <Footer />
       </div>
     </>
   );

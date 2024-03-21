@@ -1,0 +1,73 @@
+.Al-container{
+    width: 100%;
+}
+#dark .Al-container{
+    background-color:#2f2f2f
+}
+.Al-title{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+#dark .Al-title{
+    color: #ffffffe6;
+}
+.Al-Album-cnt{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+}
+
+.Al-list{
+    width: 200px;
+    height: auto;
+    padding-bottom: 10px;
+}
+.Al-image-cnt{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    margin: -12px 10px -14px 10px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.Al-image-cnt:hover .overlay{
+    visibility: visible;
+}
+.Al-image-cnt:hover{
+    filter: brightness(0.75);
+}
+
+.Al-list img{
+    border-radius: 10px;
+}
+
+.Al-list-title{
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+#dark .Al-list-title{
+    color: #ffffffe6;
+}
+.overlay{
+    position: absolute;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.3);
+    cursor: pointer;
+    background-image: url(https://a10.gaanacdn.com/gn_img/images/play_1621599900.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: calc(50% + 1px) 50%;
+}

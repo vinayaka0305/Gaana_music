@@ -1,0 +1,99 @@
+.music-player{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 15px 25px;
+    border-radius: 0;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+}
+
+#dark .music-player{
+    background-color: #222428;
+}
+.current-music{
+    align-items: center;
+    flex: 2;
+}
+.flex-row{
+    display: flex;
+}
+.song-info{
+    flex-direction: column;
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.song-cover{
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right : 10px;
+}
+.t_over{
+    font-size: 15px;
+}
+#dark .t_over{
+    color: #f5f5f5;
+}
+.t_over2{
+    font-size: 12px;
+    margin-top: 4px;
+}
+.music-controls{
+    align-items: center;
+    justify-content: center;
+    flex: 3;
+    padding-left: 90px;
+}
+.time{
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 12px;
+    padding: 6px 16px; 
+}
+.music-controls button {
+    margin: 0 12px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.music-controls .svg_color .music-quality .svg_color{
+    fill: black;
+}
+
+#dark .svg_color_btns{
+    fill: #fff;
+}
+.play{
+    background-color: red !important;
+    border-radius: 20px;
+    height: 32px;
+    width: 32px;
+}
+.play svg{
+    padding: 0 0 -1px 0px;
+}
+.music-quality {
+    flex: 1;
+    justify-content: flex-end;
+}
+.music-quality button{
+    margin: 0 12px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.music-quality .svg_color{
+    fill: black;
+}
+
+#dark .a-svg_color{
+    fill: #fff;
+}
+#light .a-svg_color{
+    fill: #222428;
+}

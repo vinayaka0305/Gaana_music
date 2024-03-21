@@ -1,0 +1,59 @@
+.Album-song-container {
+  display: flex;
+  /* z-index: 1; */
+}
+.custom-link {
+  text-decoration: none;
+}
+.my-albumCard {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-albumCard:hover .album-img-cont {
+  filter: brightness(0.75);
+}
+.album-img-cont {
+  width: 315px;
+  height: 220px;
+}
+.album-img-cont img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.album-name{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .Album-song-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+      justify-content: center; /* Center align the cards */
+    }
+    .my-albumCard {
+      margin: 4px;
+      width: calc(50% - 8px); /* Set width of each card to 50% minus margin */
+      max-width: 150px; /* Set maximum width */
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+    }
+    .album-img-cont {
+      height: 100%;
+      width: 100%;
+    }
+    .album-name{
+        display: block;
+        margin: 1px;
+        font-size: 10px;
+    }
+    #dark .album-name{
+        color: #ffffff;
+    }
+  }
+  

@@ -1,77 +1,87 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import axios from "axios";
-import { useEffect, useState } from "react";
+// App.js
+import React, { createContext, useState } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { Header } from "./Components/Header";
 import Nav from "./Components/Nav";
 import HomePage from "./Components/HomePage";
 import LoginPage from "./Components/LoginPage";
 import TrendingSongs from "./Components/TrendingSongs";
+import { MusicProvider } from "./MusicContext";
+import TrendingSongsDetails from "./Components/TrendingSongsDetails";
+import Player from "./Components/Player";
+import SignUpPage from "./Components/SignUpPage";
+import MyMusic from "./Components/MyMusic";
+import { useUser } from "./UseProvider";
+import AlbumListUI from "./Components/AlbumListUI";
+import AlbumDetails from "./Components/AlbumDetails";
+import T20Songs from "./Components/Top20Songs";
+import SubscribePage from "./Components/SubscribePage";
+
+
+
+
+export const ThemeContext = createContext(null);
 
 function App() {
-  axios.interceptors.request.use((config) => {
-    config.headers["projectid"] = "6marrwzascw6";
-    return config;
-  });
+  const[theme,setTheme] = useState("dark")
 
-  const [list, setList] = useState([]);
-
-  const getMusicList = async () => {
-    axios
-      .get("https://academics.newtonschool.co/api/v1/music/song")
-      .then((response) => {
-        setList(response.data.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  useEffect(() => {
-    getMusicList();
-  }, []);
-
-  const onSearhDetails=(event)=>{
-    const queryString = {
-      title:event.target.value,
+  const toggleTheme =()=>{
+    setTheme((curr)=>(curr==="light"?"dark":"light"))
+  }
+  const { getToken } = useUser();
+  // console.log(getToken);
+  function ProtectedRoute({ children }) {
+    if (getToken) {
+      return children;
+    } else {
+      return <Navigate to="/login" />;
     }
-    axios.get("https://academics.newtonschool.co/api/v1/music/song",{
-      params:{
-        search:JSON.stringify(queryString),
-      }
-    }).then((response)=>{
-      setList(response.data.data);
-    }).catch((err)=>{
-      console.log(err);
-    })
-  };
+  }
 
-  const onFilterSelection=async(input)=>{
-    const queryString = {
-      featured:input,
-    }
-    axios.get("https://academics.newtonschool.co/api/v1/music/song",{
-      params:{
-        filter: JSON.stringify(queryString)
-      }
-    }).then((response)=>{
-      setList(response.data.data);
-    }).catch((err)=>{
-      console.log(err);
-    })
-} 
-  
+
   return (
-    <Router>
-    <Header search={onSearhDetails}/>
-    <Nav onFilterSelection={onFilterSelection}/>
-    <Routes>
-      <Route path="/" element={<HomePage list={list} />} />
-      <Route path="/login" element={<LoginPage/>}/>
-      <Route path="/TrendingSongs" element={< TrendingSongs list={list}/>}/>
-    </Routes>
-  </Router> 
+    <ThemeContext.Provider value={{theme,toggleTheme}}>
+      <div className="app-container" id={theme}>
+        <Router>
+          <MusicProvider>
+            <Header theme={theme} toggleTheme={toggleTheme}/>
+            <Nav />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/signup" element={<SignUpPage />} />
+              <Route path="/TrendingSongs" element={<TrendingSongs />} />
+              <Route path="/Top_20" element ={<T20Songs/>}/>
+              <Route path="/album" element={<AlbumListUI />} />
+              <Route path="/song/:id" element={<TrendingSongsDetails />} />
+              <Route path="/player" element={<Player />} />
+              <Route path="/album/:id" element={<AlbumDetails/>}/>
+              <Route
+                path="/mymusic"
+                element={
+                  <ProtectedRoute>
+                    <MyMusic />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/subscribe"
+                element={
+                  <ProtectedRoute>
+                    <SubscribePage/>
+                  </ProtectedRoute>
+                }
+              />
+            </Routes>
+          </MusicProvider>
+        </Router>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

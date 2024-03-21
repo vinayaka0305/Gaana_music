@@ -1,0 +1,83 @@
+.screen-container{
+    display: flex;
+    width: 100%;
+}
+.top-container{
+    width: 75%;
+    margin-top: 60px;
+}
+.top-side{
+    display: flex;
+}
+
+.image-container{
+    height: 260px;
+    width: 100%;
+}
+.image-container img{
+    width: 200px;
+    height: 200px;
+    
+}
+
+.table-container .thead{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+#dark .thead{
+    border-bottom: 1px solid #8e8e93;
+}
+#light .thead{
+    border-bottom: 1px solid #8e8e93;
+}
+#dark .tsongs-container{
+    background-color: #1b1b1b;
+}
+.tbody .tr{
+    display: flex;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+ }
+
+#dark .tr{
+    border-bottom: 1px solid #8e8e93;
+}
+#light .tr{
+    border-bottom: 1px solid #8e8e93;
+}
+.th, .td {
+   padding: 8px;
+   align-items: left; /* Align text to the left */
+ }
+ .track-container,
+ .artist-container {
+   flex: 1; /* Equal width */
+ }
+ .track-container {
+    margin-right: 10px; /* Add some spacing between columns */
+  }
+  
+  .artist-container {
+    margin-left: 10px; /* Add some spacing between columns */
+  }
+
+  .track-heading-container,
+.artist-heading-container {
+  flex: 1; /* Equal width */
+}
+
+.track-heading-container {
+  margin-right: 10px; /* Add some spacing between headings */
+}
+
+.artist-heading-container {
+  margin-left: 10px; /* Add some spacing between headings */
+}
+
+#dark .no-songs{
+  color: #ffffffe6;
+}

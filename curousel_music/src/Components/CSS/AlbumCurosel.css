@@ -1,0 +1,48 @@
+.album-product-curosel{
+    position: relative;
+    overflow: hidden;
+    padding: 26px;
+    margin-top: 20px;
+   z-index: 1;
+}
+.album-product-container{
+    padding: 0 10px ;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.album-pre-btn,.album-next-btn{
+    border: none;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+.album-next-btn{
+    right: 0;
+}
+.album-pre-btn p,
+.album-next-btn p{
+    font-size: 50px;
+    background-color: rgba(0, 0, 0, 0.436);
+    box-shadow: 0px 0px 10px 1px black;
+    border-radius: 10px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+   .album-pre-btn{
+    display: none;
+   }
+   .album-next-btn{
+    display: none;
+   }
+}
